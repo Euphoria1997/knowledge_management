@@ -46,7 +46,7 @@ public class BasicQueryController {
 //        todo: 需写查询逻辑
 //        todo: 需写统计逻辑
 //        List<Object> query_result = null;
-        List<DocumentResult> query_results = iDocumentService.get_document_with_page_indexs(begin_query_index, end_query_index, query_key, userID);
+        List<DocumentResult> query_results = documentMapper.get_document_with_page_indexs(begin_query_index, end_query_index, query_key, userID);
         /**
          * private Integer begin_index;
          *     private Integer end_index;
