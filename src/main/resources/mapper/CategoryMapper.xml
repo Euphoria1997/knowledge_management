@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.knowledge_managing.mapper.CategoryMapper">
+    <select id="get_document_statistics" resultType="com.example.knowledge_managing.entity.Category">
+        select * from category
+        from WHERE level1 = #{level1};
+    </select>
+</mapper>

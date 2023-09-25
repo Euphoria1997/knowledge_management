@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.knowledge_managing.mapper.DocumentMapper">
+    <select id="get_document_with_page_indexs" resultType="com.example.knowledge_managing.common.DocumentResult">
+        select * from `document` as d where
+        <foreach collection="keywords" item="item" separator="or">
+            d.keywords like concat('%', #{item}, '%')
+        </foreach>>
+    </select>
+</mapper>
